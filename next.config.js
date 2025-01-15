@@ -1,10 +1,10 @@
-/**
- * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially useful
- * for Docker builds.
- */
-import "./src/env.js";
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'standalone',
+  // Enable SWC minification for better performance
+  swcMinify: true,
+  // Disable x-powered-by header for security
+  poweredByHeader: false,
+}
 
-/** @type {import("next").NextConfig} */
-const config = {};
-
-export default config;
+module.exports = nextConfig
