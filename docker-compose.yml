@@ -1,6 +1,5 @@
 services:
   web:
-    container_name: onsat
     build: .
     ports:
       - "3000:3000"
